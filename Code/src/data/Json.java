@@ -13,6 +13,7 @@ public class Json {
      * This class read json arrays and json object from a file.
      */
     static class Reader {
+        
         /**
          * Reads a JSON file from the specified path and returns a JSONObject.
          *
@@ -21,7 +22,7 @@ public class Json {
          * @throws IOException if an error occurs while reading the file.
          * @throws ParseException if the file is not in a valid JSON format.
          */
-        public static JSONObject object(String path) throws IOException, ParseException {
+        public static JSONObject object(String path, JSONObject obj) throws IOException, ParseException {
             JSONParser parser = new JSONParser();
 
             try (FileReader reader = new FileReader(path)) {
@@ -59,7 +60,7 @@ public class Json {
          * @param path the path of the file where the JSON object will be written.
          * @throws RuntimeException if an error occurs while writing to the file.
          */
-        public static void object(JSONObject obj, String path) {
+        public static void object(String path, JSONObject obj) {
             try (FileWriter file = new FileWriter(path)) {
                 file.write(obj.toJSONString()); // Convert the JSON object to a string and write it to the file
                 file.flush(); // Ensure all data is written
