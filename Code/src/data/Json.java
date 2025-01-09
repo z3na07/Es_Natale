@@ -1,88 +1,89 @@
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+package data;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * The Json class provides methods to read and write JSON files using Google's Gson library.
+ * It is structured into two nested classes: `Reader` for reading JSON data and `Writer` for writing JSON data.
+ */
 public class Json {
 
     /**
-     * This class read json arrays and json object from a file.
+     * The `Reader` class provides methods for reading JSON data from files.
      */
     static class Reader {
-        
-        /**
-         * Reads a JSON file from the specified path and returns a JSONObject.
-         *
-         * @param path the path of the JSON file to read.
-         * @return a JSONObject containing the data from the JSON file.
-         * @throws IOException if an error occurs while reading the file.
-         * @throws ParseException if the file is not in a valid JSON format.
-         */
-        public static JSONObject object(String path, JSONObject obj) throws IOException, ParseException {
-            JSONParser parser = new JSONParser();
 
+        /**
+         * Attempts to open a file at the specified path and return a FileReader object.
+         *
+         * @param path The path to the file to be read.
+         * @return A FileReader object for the specified file, or null if the file cannot be opened.
+         */
+        private static FileReader readFile(String path) {
             try (FileReader reader = new FileReader(path)) {
-                // Parse the JSON file and return it as a JSONObject
-                return (JSONObject) parser.parse(reader);
+                return reader;
+            } catch (IOException e) {
+                return null;
             }
         }
 
         /**
-         * Reads a JSON file from the specified path and returns a JSONArray.
+         * Reads a JSON file and parses it into a generic object of the specified type.
          *
-         * @param path the path of the JSON file to read.
-         * @return a JSONArray containing the data from the JSON file.
-         * @throws IOException if an error occurs while reading the file.
-         * @throws ParseException if the file is not in a valid JSON format.
+         * @param <T>   The type of the object to be created from the JSON data.
+         * @param path  The path to the JSON file to be read.
+         * @param clazz The class of the object to be created from the JSON data.
+         * @return An object of the specified type representing the JSON content, or null if the file cannot be read.
          */
-        public static JSONArray array(String path, JSONArray array) throws IOException, ParseException {
-            JSONParser parser = new JSONParser();
+        public static <T> T read(String path, Class<T> clazz) {
+            FileReader reader = readFile(path);
 
-            try (FileReader reader = new FileReader(path)) {
-                // Parse the JSON file and return it as a JSONArray
-                return (JSONArray) parser.parse(reader);
+            if (reader == null) {
+                return null; // If the file cannot be opened, return null
             }
+
+            // Parse the JSON file into a JsonElement
+            JsonElement jsonElement = JsonParser.parseReader(reader);
+
+            // Cast and return the JsonElement as the specified type
+            return (T) jsonElement;
         }
     }
 
     /**
-     * This class write json objects json arrays in file.
+     * The `Writer` class provides methods for writing JSON data to files.
      */
     static class Writer {
         /**
-         * Writes a JSON object to the specified file.
+         * Writes a string to a file at the specified path.
          *
-         * @param obj  the JSON object to write.
-         * @param path the path of the file where the JSON object will be written.
-         * @throws RuntimeException if an error occurs while writing to the file.
+         * @param path The path to the file where the string will be written.
+         * @param s    The string content to write to the file.
+         * @throws RuntimeException If an error occurs during the file write operation.
          */
-        public static void object(String path, JSONObject obj) {
+        private static void writeFile(String path, String s) {
             try (FileWriter file = new FileWriter(path)) {
-                file.write(obj.toJSONString()); // Convert the JSON object to a string and write it to the file
-                file.flush(); // Ensure all data is written
+                file.write(s);
+                file.flush();
             } catch (IOException e) {
                 throw new RuntimeException("An error occurred while writing the JSON object to the file: " + path, e);
             }
         }
 
         /**
-         * Writes a JSON array to the specified file.
+         * Converts a JsonElement to a string and writes it to a file at the specified path.
          *
-         * @param arr  the JSON array to write.
-         * @param path the path of the file where the JSON array will be written.
-         * @throws RuntimeException if an error occurs while writing to the file.
+         * @param path        The path to the file where the JSON data will be written.
+         * @param jsonElement The JsonElement object to be written to the file.
+         * @throws RuntimeException If an error occurs during the file write operation.
          */
-        public static void array(String path, JSONArray arr) {
-            try (FileWriter file = new FileWriter(path)) {
-                file.write(arr.toJSONString()); // Convert the JSON array to a string and write it to the file
-                file.flush(); // Ensure all data is written
-            } catch (IOException e) {
-                throw new RuntimeException("An error occurred while writing the JSON array to the file: " + path, e);
-            }
+        public static void write(String path, JsonElement jsonElement) {
+            writeFile(path, jsonElement.toString());
         }
     }
 }

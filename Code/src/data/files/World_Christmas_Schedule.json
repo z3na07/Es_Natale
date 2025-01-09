@@ -1,0 +1,427 @@
+[
+    {
+        "timezone": "UTC+14",
+        "countries": [
+            {
+                "name": "Kiribati (Line Islands)",
+                "population": 110000,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+13",
+        "countries": [
+            {
+                "name": "Kiribati (Phoenix Islands)",
+                "population": 5000,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Tonga",
+                "population": 104000,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Samoa",
+                "population": 198000,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+12",
+        "countries": [
+            {
+                "name": "New Zealand",
+                "population": 5084000,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Fiji",
+                "population": 896000,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Kiribati (Gilbert Islands)",
+                "population": 103000,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Marshall Islands",
+                "population": 59000,
+                "good_children_percentage": 0.79
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+11",
+        "countries": [
+            {
+                "name": "Solomon Islands",
+                "population": 721000,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Vanuatu",
+                "population": 319000,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "New Caledonia",
+                "population": 291000,
+                "good_children_percentage": 0.8
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+10",
+        "countries": [
+            {
+                "name": "Australia (Eastern)",
+                "population": 25980000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Papua New Guinea",
+                "population": 9358000,
+                "good_children_percentage": 0.9
+            },
+            {
+                "name": "Guam",
+                "population": 170000,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Micronesia",
+                "population": 115000,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+9",
+        "countries": [
+            {
+                "name": "Japan",
+                "population": 124800000,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "South Korea",
+                "population": 51840000,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Palau",
+                "population": 18000,
+                "good_children_percentage": 0.75
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+8",
+        "countries": [
+            {
+                "name": "China",
+                "population": 1412000000,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Philippines",
+                "population": 113900000,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Malaysia",
+                "population": 33480000,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Singapore",
+                "population": 5600000,
+                "good_children_percentage": 0.81
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+7",
+        "countries": [
+            {
+                "name": "Thailand",
+                "population": 71720000,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Vietnam",
+                "population": 98200000,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Cambodia",
+                "population": 16920000,
+                "good_children_percentage": 0.75
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+6",
+        "countries": [
+            {
+                "name": "Bangladesh",
+                "population": 172200000,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Bhutan",
+                "population": 783000,
+                "good_children_percentage": 0.83
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+5",
+        "countries": [
+            {
+                "name": "Pakistan",
+                "population": 248900000,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Uzbekistan",
+                "population": 35320000,
+                "good_children_percentage": 0.87
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+4",
+        "countries": [
+            {
+                "name": "United Arab Emirates",
+                "population": 9780000,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Armenia",
+                "population": 2970000,
+                "good_children_percentage": 0.84
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+3",
+        "countries": [
+            {
+                "name": "Saudi Arabia",
+                "population": 36340000,
+                "good_children_percentage": 0.8
+            },
+            {
+                "name": "Kenya",
+                "population": 54840000,
+                "good_children_percentage": 0.88
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+2",
+        "countries": [
+            {
+                "name": "South Africa",
+                "population": 60370000,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Egypt",
+                "population": 110900000,
+                "good_children_percentage": 0.76
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+1",
+        "countries": [
+            {
+                "name": "Algeria",
+                "population": 45180000,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Nigeria",
+                "population": 224900000,
+                "good_children_percentage": 0.75
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+0",
+        "countries": [
+            {
+                "name": "United Kingdom",
+                "population": 67550000,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Iceland",
+                "population": 380000,
+                "good_children_percentage": 0.83
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-1",
+        "countries": [
+            {
+                "name": "Cape Verde",
+                "population": 591000,
+                "good_children_percentage": 0.78
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-2",
+        "countries": [
+            {
+                "name": "South Georgia and the South Sandwich Islands",
+                "population": 30,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-3",
+        "countries": [
+            {
+                "name": "Brazil (Brasilia)",
+                "population": 214300000,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Argentina",
+                "population": 46180000,
+                "good_children_percentage": 0.89
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-4",
+        "countries": [
+            {
+                "name": "Venezuela",
+                "population": 33000000,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Bolivia",
+                "population": 12430000,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-5",
+        "countries": [
+            {
+                "name": "United States (Eastern)",
+                "population": 128800000,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Colombia",
+                "population": 53730000,
+                "good_children_percentage": 0.88
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-6",
+        "countries": [
+            {
+                "name": "United States (Central)",
+                "population": 103500000,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Mexico",
+                "population": 131700000,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-7",
+        "countries": [
+            {
+                "name": "United States (Mountain)",
+                "population": 24850000,
+                "good_children_percentage": 0.8
+            },
+            {
+                "name": "Canada (Mountain)",
+                "population": 4000000,
+                "good_children_percentage": 0.72
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-8",
+        "countries": [
+            {
+                "name": "United States (Pacific)",
+                "population": 53000000,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Canada (Pacific)",
+                "population": 4500000,
+                "good_children_percentage": 0.84
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-9",
+        "countries": [
+            {
+                "name": "United States (Alaska)",
+                "population": 730000,
+                "good_children_percentage": 0.89
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-10",
+        "countries": [
+            {
+                "name": "Hawaii",
+                "population": 1416000,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "French Polynesia",
+                "population": 280000,
+                "good_children_percentage": 0.71
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-11",
+        "countries": [
+            {
+                "name": "American Samoa",
+                "population": 56000,
+                "good_children_percentage": 0.73
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-12",
+        "countries": [
+            {
+                "name": "Baker Island",
+                "population": 0,
+                "good_children_percentage": 0.83
+            }
+        ]
+    }
+]
