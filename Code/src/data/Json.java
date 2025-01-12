@@ -2,88 +2,72 @@ package data;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.google.gson.Gson;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * The Json class provides methods to read and write JSON files using Google's Gson library.
- * It is structured into two nested classes: `Reader` for reading JSON data and `Writer` for writing JSON data.
- */
 public class Json {
 
-    /**
-     * The `Reader` class provides methods for reading JSON data from files.
-     */
-    static class Reader {
+    public static class Reader {
 
         /**
-         * Attempts to open a file at the specified path and return a FileReader object.
+         * Opens a JSON file for reading and returns a FileReader object.
          *
-         * @param path The path to the file to be read.
-         * @return A FileReader object for the specified file, or null if the file cannot be opened.
+         * @param path the file path of the JSON file.
+         * @return a FileReader object to read the file.
+         * @throws IOException if the file cannot be opened.
          */
-        private static FileReader readFile(String path) {
-            try (FileReader reader = new FileReader(path)) {
-                return reader;
-            } catch (IOException e) {
-                return null;
-            }
+        private static FileReader readFile(String path) throws IOException {
+            return new FileReader(path); // Return a FileReader without closing it immediately.
         }
 
         /**
-         * Reads a JSON file and parses it into a generic object of the specified type.
+         * Reads a JSON file and converts its content into the specified class type using Gson.
          *
-         * @param <T>   The type of the object to be created from the JSON data.
-         * @param path  The path to the JSON file to be read.
-         * @param clazz The class of the object to be created from the JSON data.
-         * @return An object of the specified type representing the JSON content, or null if the file cannot be read.
+         * @param path  the file path of the JSON file.
+         * @param clazz the class type to convert the JSON into.
+         * @param <T>   the type of the resulting object.
+         * @return the deserialized object of type T, or null if an error occurs.
          */
         public static <T> T read(String path, Class<T> clazz) {
-            FileReader reader = readFile(path);
-
-            if (reader == null) {
-                return null; // If the file cannot be opened, return null
+            try (FileReader reader = readFile(path)) { // Ensure the FileReader is closed after use.
+                JsonElement jsonElement = JsonParser.parseReader(reader); // Parse the JSON file.
+                Gson gson = new Gson(); // Create a Gson instance.
+                return gson.fromJson(jsonElement, clazz); // Deserialize the JSON into the specified type.
+            } catch (IOException e) {
+                throw new RuntimeException("Error reading JSON file: " + path, e);
             }
-
-            // Parse the JSON file into a JsonElement
-            JsonElement jsonElement = JsonParser.parseReader(reader);
-
-            // Cast and return the JsonElement as the specified type
-            return (T) jsonElement;
         }
     }
 
-    /**
-     * The `Writer` class provides methods for writing JSON data to files.
-     */
-    static class Writer {
+    public static class Writer {
         /**
-         * Writes a string to a file at the specified path.
+         * Writes a string to the specified file path.
          *
-         * @param path The path to the file where the string will be written.
-         * @param s    The string content to write to the file.
-         * @throws RuntimeException If an error occurs during the file write operation.
+         * @param path the file path to write to.
+         * @param s    the string to be written to the file.
+         * @throws RuntimeException if an error occurs during writing.
          */
         private static void writeFile(String path, String s) {
-            try (FileWriter file = new FileWriter(path)) {
-                file.write(s);
-                file.flush();
+            try (FileWriter file = new FileWriter(path)) { // Ensure the FileWriter is closed after use.
+                file.write(s); // Write the string to the file.
+                file.flush(); // Flush the data to ensure it is saved.
             } catch (IOException e) {
-                throw new RuntimeException("An error occurred while writing the JSON object to the file: " + path, e);
+                throw new RuntimeException("An error occurred while writing to the file: " + path, e);
             }
         }
 
         /**
-         * Converts a JsonElement to a string and writes it to a file at the specified path.
+         * Writes a JSON element to the specified file path.
          *
-         * @param path        The path to the file where the JSON data will be written.
-         * @param jsonElement The JsonElement object to be written to the file.
-         * @throws RuntimeException If an error occurs during the file write operation.
+         * @param path        the file path to write to.
+         * @param jsonElement the JSON element to be written to the file.
+         * @throws RuntimeException if an error occurs during writing.
          */
         public static void write(String path, JsonElement jsonElement) {
-            writeFile(path, jsonElement.toString());
+            writeFile(path, jsonElement.toString()); // Convert the JSON element to a string and write it to the file.
         }
     }
 }
