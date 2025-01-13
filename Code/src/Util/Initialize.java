@@ -5,14 +5,39 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import country.Country;
 import data.Json;
+import reindeer.Reindeer;
 
 import java.util.ArrayList;
 
 public class Initialize {
     private ArrayList<Country> countryArrayList;
+    private ArrayList<Reindeer> reindeerArrayList;
 
-    public Initialize(String countryArrayListPath) {
+    public Initialize(String countryArrayListPath, String reindeerPath) {
         this.countryArrayList = loadCountry(countryArrayListPath);
+        this.reindeerArrayList = loadReindeer(reindeerPath);
+    }
+
+    private ArrayList<Reindeer> loadReindeer(String reindeerPath) {
+        ArrayList<Reindeer> reindeer = new ArrayList<>();
+
+        JsonArray jsonReindeer = Json.Reader.read(reindeerPath, JsonArray.class);
+
+        for (JsonElement jsonElement : jsonReindeer) {
+            reindeer.add(new Reindeer(
+                    jsonElement.toString().substring(1, jsonElement.toString().length() - 1),
+                    false,
+                    false
+            ));
+        }
+
+        reindeer.add(new Reindeer(
+                "Rudolph",
+                true,
+                false
+        ));
+
+        return reindeer;
     }
 
     private ArrayList<Country> loadCountry(String countryArrayListPath) {
