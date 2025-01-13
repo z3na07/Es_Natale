@@ -55,4 +55,8 @@ public class Initialize {
 
         return countries;
     }
+
+    public ArrayList<Country> getCountryArrayList() {
+        return countryArrayList;
+    }
 }

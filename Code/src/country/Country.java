@@ -12,4 +12,20 @@ public class Country {
         this.goodChilder = goodChilder;
         this.timeZone = timeZone;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public long getPopulation() {
+        return population;
+    }
+
+    public double getGoodChilder() {
+        return goodChilder;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
+    }
 }
