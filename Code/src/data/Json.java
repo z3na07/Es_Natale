@@ -11,18 +11,6 @@ import java.io.IOException;
 public class Json {
 
     public static class Reader {
-
-        /**
-         * Opens a JSON file for reading and returns a FileReader object.
-         *
-         * @param path the file path of the JSON file.
-         * @return a FileReader object to read the file.
-         * @throws IOException if the file cannot be opened.
-         */
-        private static FileReader readFile(String path) throws IOException {
-            return new FileReader(path); // Return a FileReader without closing it immediately.
-        }
-
         /**
          * Reads a JSON file and converts its content into the specified class type using Gson.
          *
@@ -32,7 +20,7 @@ public class Json {
          * @return the deserialized object of type T, or null if an error occurs.
          */
         public static <T> T read(String path, Class<T> clazz) {
-            try (FileReader reader = readFile(path)) { // Ensure the FileReader is closed after use.
+            try (FileReader reader = new FileReader(path)) { // Ensure the FileReader is closed after use.
                 JsonElement jsonElement = JsonParser.parseReader(reader); // Parse the JSON file.
                 Gson gson = new Gson(); // Create a Gson instance.
                 return gson.fromJson(jsonElement, clazz); // Deserialize the JSON into the specified type.
