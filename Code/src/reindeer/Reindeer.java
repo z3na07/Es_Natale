@@ -2,12 +2,10 @@ package reindeer;
 
 public class Reindeer {
     private String name;
-    private boolean isRudolph;
     private boolean isActive;
 
-    public Reindeer(String name, boolean isRudolph, boolean isActive) {
+    public Reindeer(String name, boolean isActive) {
         this.name = name;
-        this.isRudolph = isRudolph;
         this.isActive = isActive;
     }
 
@@ -15,8 +13,15 @@ public class Reindeer {
     public String toString() {
         return "Reindeer{" +
                 "name='" + name + '\'' +
-                ", isRudolph=" + isRudolph +
                 ", isActive=" + isActive +
                 '}';
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }

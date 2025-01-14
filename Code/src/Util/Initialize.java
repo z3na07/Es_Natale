@@ -26,16 +26,9 @@ public class Initialize {
         for (JsonElement jsonElement : jsonReindeer) {
             reindeer.add(new Reindeer(
                     jsonElement.toString().substring(1, jsonElement.toString().length() - 1),
-                    false,
                     false
             ));
         }
-
-        reindeer.add(new Reindeer(
-                "Rudolph",
-                true,
-                false
-        ));
 
         return reindeer;
     }
@@ -83,5 +76,9 @@ public class Initialize {
 
     public ArrayList<Country> getCountryArrayList() {
         return countryArrayList;
+    }
+
+    public ArrayList<Reindeer> getReindeerArrayList() {
+        return reindeerArrayList;
     }
 }
