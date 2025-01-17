@@ -13,6 +13,11 @@ public class Country {
         this.timeZone = timeZone;
     }
 
+    public long getPopulationOfGoodChilder() {
+        Number n = population / goodChilder;
+        return n.longValue();
+    }
+
     public String getName() {
         return name;
     }

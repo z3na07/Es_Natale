@@ -22,8 +22,8 @@ public class SantaClaus {
         return totalGiftsDelivered;
     }
 
-    public void setTotalGiftsDelivered(long totalGiftsDelivered) {
-        this.totalGiftsDelivered = totalGiftsDelivered;
+    public void addTotalGiftsDelivered(long giftsToAdd) {
+        this.totalGiftsDelivered += totalGiftsDelivered;
     }
 
     public int getTimezonePassed() {
