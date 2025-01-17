@@ -11,7 +11,8 @@ public class Main {
     public static void main(String[] args) {
         Initialize initialize = new Initialize(
                 "src/data/files/World_Christmas_Schedule.json",
-                "src/data/files/reindeer.json");
+                "src/data/files/reindeer.json"
+        );
         CountryManager countryManager = new CountryManager(initialize.getCountryArrayList());
         ReindeerTeam reindeerTeam = new ReindeerTeam(initialize.getReindeerArrayList());
         SantaClaus santaClaus = new SantaClaus(reindeerTeam);
@@ -23,12 +24,9 @@ public class Main {
 
             if (countriesInTimezone.isEmpty()) {
                 break;
-
+            }
         }
 
         System.out.println();
     }
-
-
-
 }
