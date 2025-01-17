@@ -1,5 +1,6 @@
 package data;
 
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.Gson;
@@ -9,6 +10,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Json {
+
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public static class Reader {
         /**
@@ -22,7 +25,6 @@ public class Json {
         public static <T> T read(String path, Class<T> clazz) {
             try (FileReader reader = new FileReader(path)) { // Ensure the FileReader is closed after use.
                 JsonElement jsonElement = JsonParser.parseReader(reader); // Parse the JSON file.
-                Gson gson = new Gson(); // Create a Gson instance.
                 return gson.fromJson(jsonElement, clazz); // Deserialize the JSON into the specified type.
             } catch (IOException e) {
                 throw new RuntimeException("Error reading JSON file: " + path, e);
