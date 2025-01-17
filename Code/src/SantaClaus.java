@@ -3,12 +3,12 @@ import reindeer.ReindeerTeam;
 
 public class SantaClaus {
     private long totalGiftsDelivered;
+    private int timezonePassed;
     private int reindeerSwitches;
     private ReindeerTeam reindeerTeam;
 
     public SantaClaus(ReindeerTeam reindeerTeam) {
-        this.totalGiftsDelivered = 0;
-        this.reindeerSwitches = 0;
+        this.totalGiftsDelivered = this.timezonePassed = this.reindeerSwitches = 0;
         this.reindeerTeam = reindeerTeam;
     }
 
@@ -16,5 +16,25 @@ public class SantaClaus {
         reindeerTeam.switchTeams();
         reindeerSwitches++;
         Logger.logReindeerMessage(reindeerSwitches);
+    }
+
+    public long getTotalGiftsDelivered() {
+        return totalGiftsDelivered;
+    }
+
+    public void setTotalGiftsDelivered(long totalGiftsDelivered) {
+        this.totalGiftsDelivered = totalGiftsDelivered;
+    }
+
+    public int getTimezonePassed() {
+        return timezonePassed;
+    }
+
+    public void setTimezonePassed(int timezonePassed) {
+        this.timezonePassed = timezonePassed;
+    }
+
+    public int getReindeerSwitches() {
+        return reindeerSwitches;
     }
 }
