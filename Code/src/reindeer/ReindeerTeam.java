@@ -16,16 +16,21 @@ public class ReindeerTeam {
 
     private void loadTeams() {
         activeTeam = new ArrayList<>(reindeerArrayList.subList(3, 6));
-        restingTeam = new ArrayList<>(reindeerArrayList.subList(0, 2));
+        restingTeam = new ArrayList<>(reindeerArrayList.subList(0, 3));
+
+        activeTeam.forEach(r -> r.setActive(true));
 
         reindeerArrayList.clear();
         reindeerArrayList.addAll(activeTeam);
         reindeerArrayList.addAll(restingTeam);
+
+        activeTeam.add(rudolph);
     }
 
     public void switchTeams() {
         reindeerArrayList.forEach(r -> r.setActive(!r.isActive()));
         orderTeams();
+        activeTeam.add(rudolph);
     }
 
     private void orderTeams() {

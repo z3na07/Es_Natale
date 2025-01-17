@@ -9,6 +9,7 @@ public class Main {
                 "src/data/files/reindeer.json");
         CountryManager countryManager = new CountryManager(initialize.getCountryArrayList());
         ReindeerTeam reindeerTeam = new ReindeerTeam(initialize.getReindeerArrayList());
+        SantaClaus santaClaus = new SantaClaus(reindeerTeam);
 
         System.out.println();
     }
