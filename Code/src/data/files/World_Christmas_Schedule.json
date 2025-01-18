@@ -1,0 +1,1207 @@
+[
+    {
+        "timezone": "UTC-12:00",
+        "countries": [
+            {
+                "name": "Kiribati (Isole della Linea)",
+                "population": 119449,
+                "good_children_percentage": 0.87
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-11:00",
+        "countries": [
+            {
+                "name": "Samoa Americane",
+                "population": 200000,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Niue",
+                "population": 110034,
+                "good_children_percentage": 0.8
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-10:00",
+        "countries": [
+            {
+                "name": "Isole Cook",
+                "population": 15040,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Stati Uniti Hawaii",
+                "population": 1400000,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Tahiti",
+                "population": 189517,
+                "good_children_percentage": 0.83
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-09:00",
+        "countries": [
+            {
+                "name": "Stati Uniti Alaska",
+                "population": 730000,
+                "good_children_percentage": 0.88
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-08:00",
+        "countries": [
+            {
+                "name": "Stati Uniti Ovest",
+                "population": 49400000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Canada Ovest",
+                "population": 5000000,
+                "good_children_percentage": 0.84
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-07:00",
+        "countries": [
+            {
+                "name": "Stati Uniti Montagne Rocciose",
+                "population": 22000000,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Canada Montagne Rocciose",
+                "population": 6000000,
+                "good_children_percentage": 0.88
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-06:00",
+        "countries": [
+            {
+                "name": "Stati Uniti Centro",
+                "population": 69000000,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Messico",
+                "population": 12601410,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Guatemala",
+                "population": 18301756,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Honduras",
+                "population": 9906000,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "El Salvador",
+                "population": 6486200,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Nicaragua",
+                "population": 6624554,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Costa Rica",
+                "population": 5094118,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Canada Centro",
+                "population": 2100000,
+                "good_children_percentage": 0.8
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-05:00",
+        "countries": [
+            {
+                "name": "Stati Uniti Est",
+                "population": 156000000,
+                "good_children_percentage": 0.8
+            },
+            {
+                "name": "Canada Est",
+                "population": 24500000,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Colombia",
+                "population": 51305000,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Ecuador",
+                "population": 17846800,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Perù",
+                "population": 33456600,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Panama",
+                "population": 4314768,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Jamaica",
+                "population": 2826000,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Cuba",
+                "population": 11333483,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Haiti",
+                "population": 11700579,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Bahamas",
+                "population": 393244,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Brasile Ovest",
+                "population": 520000,
+                "good_children_percentage": 0.84
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-04:00",
+        "countries": [
+            {
+                "name": "Venezuela",
+                "population": 28681610,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Bolivia",
+                "population": 11791900,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Paraguay",
+                "population": 7132538,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Barbados",
+                "population": 287025,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Dominica",
+                "population": 71986,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Grenada",
+                "population": 112003,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Saint Kitts e Nevis",
+                "population": 53000,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Saint Lucia",
+                "population": 183627,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Saint Vincent e Grenadine",
+                "population": 110608,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Canada Atlantico",
+                "population": 2600000,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Brasile Nord",
+                "population": 8600000,
+                "good_children_percentage": 0.82
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-03:00",
+        "countries": [
+            {
+                "name": "Argentina",
+                "population": 45195777,
+                "good_children_percentage": 0.78
+            },
+            {
+                "name": "Brasile Sudeste",
+                "population": 207000000,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Uruguay",
+                "population": 3518552,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Guyana",
+                "population": 787000,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Suriname",
+                "population": 586634,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Canada Terranova",
+                "population": 510000,
+                "good_children_percentage": 0.71
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-02:00",
+        "countries": [
+            {
+                "name": "Brasile Atlantico",
+                "population": 900000,
+                "good_children_percentage": 0.81
+            }
+        ]
+    },
+    {
+        "timezone": "UTC-01:00",
+        "countries": [
+            {
+                "name": "Capo Verde",
+                "population": 555987,
+                "good_children_percentage": 0.7
+            },
+            {
+                "name": "Azzorre (Portogallo)",
+                "population": 241763,
+                "good_children_percentage": 0.81
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+00:00",
+        "countries": [
+            {
+                "name": "Regno Unito",
+                "population": 67215293,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Portogallo",
+                "population": 10276657,
+                "good_children_percentage": 0.8
+            },
+            {
+                "name": "Islanda",
+                "population": 364260,
+                "good_children_percentage": 0.7
+            },
+            {
+                "name": "Gambia",
+                "population": 2416668,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Ghana",
+                "population": 31072940,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Guinea",
+                "population": 13132792,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Guinea-Bissau",
+                "population": 1968000,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Costa d'Avorio",
+                "population": 27846400,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Liberia",
+                "population": 5154000,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Mali",
+                "population": 20250833,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Mauritania",
+                "population": 4649658,
+                "good_children_percentage": 0.78
+            },
+            {
+                "name": "Marocco",
+                "population": 36910500,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Saint Helena",
+                "population": 4354,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Senegal",
+                "population": 16743927,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Sierra Leone",
+                "population": 8120000,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Togo",
+                "population": 8278705,
+                "good_children_percentage": 0.77
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+01:00",
+        "countries": [
+            {
+                "name": "Italia",
+                "population": 59290937,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Francia",
+                "population": 67400000,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Germania",
+                "population": 83783945,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Spagna",
+                "population": 47329981,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Andorra",
+                "population": 77265,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Belgio",
+                "population": 11589616,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Lussemburgo",
+                "population": 634730,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Paesi Bassi",
+                "population": 17440000,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Monaco",
+                "population": 39200,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "San Marino",
+                "population": 34000,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Vaticano",
+                "population": 800,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Slovenia",
+                "population": 2095861,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Svizzera",
+                "population": 8636896,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Liechtenstein",
+                "population": 38315,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Albania",
+                "population": 2877800,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Austria",
+                "population": 9000000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Bosnia ed Erzegovina",
+                "population": 3280819,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Croazia",
+                "population": 3888480,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Repubblica Ceca",
+                "population": 10708981,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Ungheria",
+                "population": 9660350,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Macedonia del Nord",
+                "population": 2144592,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Montenegro",
+                "population": 622359,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Polonia",
+                "population": 37984660,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Serbia",
+                "population": 6963764,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Slovacchia",
+                "population": 5457873,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Danimarca",
+                "population": 5792202,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Norvegia",
+                "population": 5378850,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Svezia",
+                "population": 10379295,
+                "good_children_percentage": 0.78
+            },
+            {
+                "name": "Tunisia",
+                "population": 11818618,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Libia",
+                "population": 6871287,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Camerun",
+                "population": 27383688,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Chad",
+                "population": 18280000,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Repubblica Centrafricana",
+                "population": 4829767,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Niger",
+                "population": 24206600,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Benin",
+                "population": 12123198,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Nigeria",
+                "population": 219463000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Gabon",
+                "population": 2225734,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Congo (Brazzaville)",
+                "population": 5518098,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Congo (Kinshasa)",
+                "population": 89561403,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Angola",
+                "population": 33469800,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Ciad",
+                "population": 16425864,
+                "good_children_percentage": 0.81
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+02:00",
+        "countries": [
+            {
+                "name": "Egitto",
+                "population": 10425832,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Sudafrica",
+                "population": 60000000,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Grecia",
+                "population": 10715549,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Bulgaria",
+                "population": 6948445,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Cipro",
+                "population": 1207359,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Estonia",
+                "population": 1328360,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Finlandia",
+                "population": 5540720,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Israele",
+                "population": 10174117,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Giordania",
+                "population": 10973700,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Lettonia",
+                "population": 1900000,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Lituania",
+                "population": 2793471,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Palestina",
+                "population": 5166000,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Romania",
+                "population": 19317984,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Siria",
+                "population": 17500657,
+                "good_children_percentage": 0.78
+            },
+            {
+                "name": "Turchia",
+                "population": 87573630,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Ucraina",
+                "population": 41902416,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Zimbabwe",
+                "population": 14862924,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Botswana",
+                "population": 2351625,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Malawi",
+                "population": 20274908,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Zambia",
+                "population": 18383955,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Namibia",
+                "population": 2540910,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Lesotho",
+                "population": 2142000,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Eswatini",
+                "population": 1172000,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Mozambico",
+                "population": 31255400,
+                "good_children_percentage": 0.8
+            },
+            {
+                "name": "Burundi",
+                "population": 11890784,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Ruanda",
+                "population": 13000000,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Russia Kaliningrad",
+                "population": 1000000,
+                "good_children_percentage": 0.77
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+03:00",
+        "countries": [
+            {
+                "name": "Arabia Saudita",
+                "population": 35000000,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Turchia",
+                "population": 87573630,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Iraq",
+                "population": 40222517,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Qatar",
+                "population": 3000000,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Bahrain",
+                "population": 1703232,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Kuwait",
+                "population": 4270571,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Yemen",
+                "population": 30491236,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Russia Mosca",
+                "population": 25000000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Bielorussia",
+                "population": 9449323,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Comore",
+                "population": 869601,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Djibouti",
+                "population": 1136000,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Eritrea",
+                "population": 3546421,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Etiopia",
+                "population": 11771213,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Kenya",
+                "population": 54666700,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Madagascar",
+                "population": 27691000,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Somalia",
+                "population": 15442905,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Sudan",
+                "population": 47886000,
+                "good_children_percentage": 0.9
+            },
+            {
+                "name": "Tanzania",
+                "population": 61498438,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Uganda",
+                "population": 46985000,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Mayotte",
+                "population": 320901,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Reunion",
+                "population": 885700,
+                "good_children_percentage": 0.85
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+04:00",
+        "countries": [
+            {
+                "name": "Emirati Arabi Uniti",
+                "population": 9890400,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Georgia",
+                "population": 3989167,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Armenia",
+                "population": 2963900,
+                "good_children_percentage": 0.75
+            },
+            {
+                "name": "Azerbaigian",
+                "population": 10110000,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Oman",
+                "population": 5106620,
+                "good_children_percentage": 0.9
+            },
+            {
+                "name": "Mauritius",
+                "population": 1264328,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Seychelles",
+                "population": 98000,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Russia Samara",
+                "population": 5000000,
+                "good_children_percentage": 0.89
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+05:00",
+        "countries": [
+            {
+                "name": "Pakistan",
+                "population": 225199937,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Maldive",
+                "population": 531480,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Tajikistan",
+                "population": 10140000,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Turkmenistan",
+                "population": 6318000,
+                "good_children_percentage": 0.9
+            },
+            {
+                "name": "Uzbekistan",
+                "population": 34232050,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Kazakhstan (parte occidentale)",
+                "population": 618261,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Russia Ekaterinburg",
+                "population": 4000000,
+                "good_children_percentage": 0.71
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+06:00",
+        "countries": [
+            {
+                "name": "Bangladesh",
+                "population": 166368149,
+                "good_children_percentage": 0.88
+            },
+            {
+                "name": "Bhutan",
+                "population": 763200,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Kazakistan (Astana)",
+                "population": 1392000,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Russia Omsk",
+                "population": 2000000,
+                "good_children_percentage": 0.76
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+07:00",
+        "countries": [
+            {
+                "name": "Thailandia",
+                "population": 66971000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Vietnam",
+                "population": 97857577,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Laos",
+                "population": 7275560,
+                "good_children_percentage": 0.74
+            },
+            {
+                "name": "Cambogia",
+                "population": 16718965,
+                "good_children_percentage": 0.8
+            },
+            {
+                "name": "Indonesia (Giava, Sumatra)",
+                "population": 147795436,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Russia Krasnoyarsk",
+                "population": 3000000,
+                "good_children_percentage": 0.74
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+08:00",
+        "countries": [
+            {
+                "name": "Cina",
+                "population": 1417857811,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Singapore",
+                "population": 5703569,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Malesia",
+                "population": 34310000,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Filippine",
+                "population": 10958100,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Taiwan",
+                "population": 23598710,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Mongolia (Ulan Bator)",
+                "population": 1713000,
+                "good_children_percentage": 0.9
+            },
+            {
+                "name": "Australia Ovest",
+                "population": 2600000,
+                "good_children_percentage": 0.86
+            },
+            {
+                "name": "Brunei",
+                "population": 437500,
+                "good_children_percentage": 0.89
+            },
+            {
+                "name": "Indonesia(Borneo)",
+                "population": 16000000,
+                "good_children_percentage": 0.85
+            },
+            {
+                "name": "Russia Irkutsk",
+                "population": 2500000,
+                "good_children_percentage": 0.8
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+09:00",
+        "countries": [
+            {
+                "name": "Giappone",
+                "population": 125960000,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Corea del Sud",
+                "population": 52584799,
+                "good_children_percentage": 0.76
+            },
+            {
+                "name": "Corea del Nord",
+                "population": 25778800,
+                "good_children_percentage": 0.73
+            },
+            {
+                "name": "Timor Est",
+                "population": 1318445,
+                "good_children_percentage": 0.84
+            },
+            {
+                "name": "Russia Yakutsk",
+                "population": 1000000,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Palau",
+                "population": 18000,
+                "good_children_percentage": 0.78
+            },
+            {
+                "name": "Australia Centro",
+                "population": 2500000,
+                "good_children_percentage": 0.82
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+10:00",
+        "countries": [
+            {
+                "name": "Australia Est",
+                "population": 20250000,
+                "good_children_percentage": 0.9
+            },
+            {
+                "name": "Papua Nuova Guinea",
+                "population": 8947020,
+                "good_children_percentage": 0.79
+            },
+            {
+                "name": "Guam",
+                "population": 172952,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Micronesia",
+                "population": 115847,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Russia Vladivostok",
+                "population": 500000,
+                "good_children_percentage": 0.73
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+11:00",
+        "countries": [
+            {
+                "name": "Isole Salomone",
+                "population": 686884,
+                "good_children_percentage": 0.82
+            },
+            {
+                "name": "Vanuatu",
+                "population": 312194,
+                "good_children_percentage": 0.81
+            },
+            {
+                "name": "Russia Magadan",
+                "population": 200000,
+                "good_children_percentage": 0.83
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+12:00",
+        "countries": [
+            {
+                "name": "Figi",
+                "population": 896444,
+                "good_children_percentage": 0.87
+            },
+            {
+                "name": "Kiribati (Isole Gilbert)",
+                "population": 119449,
+                "good_children_percentage": 0.71
+            },
+            {
+                "name": "Nauru",
+                "population": 10800,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Tuvalu",
+                "population": 11800,
+                "good_children_percentage": 0.83
+            },
+            {
+                "name": "Russia Kamchatka",
+                "population": 200000,
+                "good_children_percentage": 0.72
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+13:00",
+        "countries": [
+            {
+                "name": "Tonga",
+                "population": 104494,
+                "good_children_percentage": 0.77
+            },
+            {
+                "name": "Samoa",
+                "population": 200000,
+                "good_children_percentage": 0.72
+            },
+            {
+                "name": "Kiribati (Isole della Fenice)",
+                "population": 119449,
+                "good_children_percentage": 0.81
+            }
+        ]
+    },
+    {
+        "timezone": "UTC+14:00",
+        "countries": [
+            {
+                "name": "Kiribati (Isole della Linea)",
+                "population": 119449,
+                "good_children_percentage": 0.84
+            }
+        ]
+    }
+]
