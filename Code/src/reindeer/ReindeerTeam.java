@@ -6,11 +6,11 @@ public class ReindeerTeam {
     private ArrayList<Reindeer> reindeerArrayList;
     private ArrayList<Reindeer> activeTeam;
     private ArrayList<Reindeer> restingTeam;
-    private Reindeer rudolph;
+    private Rudolph rudolph;
 
     public ReindeerTeam(ArrayList<Reindeer> reindeerArrayList) {
         this.reindeerArrayList = reindeerArrayList;
-        this.rudolph = new Reindeer("Rudolph", true);
+        this.rudolph = new Rudolph();
         loadTeams();
     }
 
