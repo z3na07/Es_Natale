@@ -1,4 +1,4 @@
-package Util;
+package util;
 
 public class TimezoneManager {
     public static int timezonePassed;

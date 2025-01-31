@@ -3,8 +3,10 @@ import util.Initialize;
 import country.Country;
 import country.CountryManager;
 import reindeer.ReindeerTeam;
+import util.Logger;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +22,7 @@ public class Main {
 
         for (int i = -12; i < 15; i++) {
         
-            // Check if the the time zone just passed, it is the thrid time zone passed
+            // Check if the time zone just passed, it is the third time zone passed
             // TimezoneManager.timezonePassed > TimezoneManager.maxTimezone
 
             String timezone = CountryManager.getTimezoneString(i);
@@ -50,13 +52,22 @@ public class Main {
                     // Ask to continue
                     System.out.println("Premere invio per continuare");
                     scanner.nextLine();
+
+                    GiftManager.resetGiftUntilStop();
                 }
 
+                // Check if there are gift left
                 if (GiftManager.giftsToDeliver > 0 && GiftManager.giftsToDeliver < GiftManager.maxGift) {
                     // stop - deliver
                     GiftManager.giftsUntilStop -= GiftManager.giftsToDeliver;
                     // santa.delivered + deliver
-                    santaClaus.addTotalGiftsDelivered(GiftManager)
+                    santaClaus.addTotalGiftsDelivered(GiftManager.giftsToDeliver);
+
+                    System.out.println(Logger.log());
+                    System.out.println("Premere invio per continuare");
+                    scanner.nextLine();
+
+                    GiftManager.resetGiftUntilStop();
                 }
             }
 

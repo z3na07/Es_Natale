@@ -1,4 +1,4 @@
-
+package reindeer;
 
 public class Rudolph extends Reindeer {
     public Rudolph() {
