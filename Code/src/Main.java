@@ -1,8 +1,8 @@
-import util.GiftManager;
-import util.Initialize;
 import country.Country;
 import country.CountryManager;
 import reindeer.ReindeerTeam;
+import util.GiftManager;
+import util.Initialize;
 import util.Logger;
 
 import java.util.ArrayList;
@@ -17,13 +17,16 @@ public class Main {
         CountryManager countryManager = new CountryManager(initialize.getCountryArrayList());
         ReindeerTeam reindeerTeam = new ReindeerTeam(initialize.getReindeerArrayList());
         SantaClaus santaClaus = new SantaClaus(reindeerTeam);
+        Logger.setReindeerTeam(reindeerTeam);
 
         Scanner scanner = new Scanner(System.in);
 
         for (int i = -12; i < 15; i++) {
         
-            // Check if the time zone just passed, it is the third time zone passed
-            // TimezoneManager.timezonePassed > TimezoneManager.maxTimezone
+            /*
+            TODO Check if the time zone just passed, it is the third time zone passed
+                util.TimezoneManager.timezonePassed > util.TimezoneManager.maxTimezone
+            */
 
             String timezone = CountryManager.getTimezoneString(i);
 
@@ -36,32 +39,32 @@ public class Main {
 
             // Get how many gifts santa have to deliver in the specific timezone
             for (Country c : countriesInTimezone) {
-                GiftManager.giftsToDeliver += c.getPopulationOfGoodChilder();
+                GiftManager.incrementGiftToDeliver(c.getPopulationOfGoodChilder());
             }
 
-            if (GiftManager.giftsToDeliver <= GiftManager.giftsUntilStop) {
-                santaClaus.addTotalGiftsDelivered(GiftManager.giftsToDeliver);
-                GiftManager.giftsUntilStop -= GiftManager.giftsToDeliver;
+            if (GiftManager.getGiftsToDeliver() <= GiftManager.getGiftsUntilStop()) {
+                santaClaus.addTotalGiftsDelivered(GiftManager.getGiftsToDeliver());
+                GiftManager.decrementGiftUntilStop(GiftManager.getGiftsToDeliver());
             } else {
                 // cycle until it's done
-                while (GiftManager.giftsToDeliver > GiftManager.giftsUntilStop) {
+                while (GiftManager.getGiftsToDeliver() > GiftManager.getGiftsUntilStop()) {
                     // deliver - stop
-                    GiftManager.giftsToDeliver -= GiftManager.giftsUntilStop;
+                    GiftManager.decrementGiftToDeliver(GiftManager.getGiftsUntilStop());
                     // santa.delivered + stop
-                    santaClaus.addTotalGiftsDelivered(GiftManager.giftsUntilStop);
+                    santaClaus.addTotalGiftsDelivered(GiftManager.getGiftsUntilStop());
+
                     // Ask to continue
+                    System.out.println(Logger.log());
                     System.out.println("Premere invio per continuare");
                     scanner.nextLine();
-
-                    GiftManager.resetGiftUntilStop();
                 }
 
                 // Check if there are gift left
-                if (GiftManager.giftsToDeliver > 0 && GiftManager.giftsToDeliver < GiftManager.maxGift) {
+                if (GiftManager.getGiftsToDeliver() > 0 && GiftManager.getGiftsToDeliver() < GiftManager.getMaxGift()) {
                     // stop - deliver
-                    GiftManager.giftsUntilStop -= GiftManager.giftsToDeliver;
+                    GiftManager.decrementGiftUntilStop(GiftManager.getGiftsToDeliver());
                     // santa.delivered + deliver
-                    santaClaus.addTotalGiftsDelivered(GiftManager.giftsToDeliver);
+                    santaClaus.addTotalGiftsDelivered(GiftManager.getGiftsToDeliver());
 
                     System.out.println(Logger.log());
                     System.out.println("Premere invio per continuare");

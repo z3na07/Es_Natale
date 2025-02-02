@@ -1,5 +1,8 @@
 package util;
 
+import reindeer.Reindeer;
+import reindeer.ReindeerTeam;
+
 /**
  * Classe di utilità per la gestione dei log relativi alle consegne dei regali e ai cambi di renne.
  * <p>
@@ -8,15 +11,36 @@ package util;
  * </p>
  */
 public class Logger {
-    private static String gift;
+    private static long giftDelivered;
     private static String reindeerMessage;
     private static int reindeerSwitch;
+    private static ReindeerTeam reindeerTeam;
+
+    public static void setReindeerTeam(ReindeerTeam reindeerTeam) {
+        Logger.reindeerTeam = reindeerTeam;
+    }
+
+    public static void setGiftDelivered(long n) {
+        giftDelivered = n;
+    }
+
+    public static void setGiftDelivered(int n) {
+        giftDelivered = n;
+    }
+
+    public static void incrementGiftDeliverd() {
+        incrementGiftDeliverd(1);
+    }
+
+    public static void incrementGiftDeliverd(long increment) {
+        giftDelivered += increment;
+    }
 
     /**
      * Aggiunge un cambio di renne incrementando il contatore di 1.
      */
-    public static void addReindeerSwitch() {
-        addReindeerSwitch(1);
+    public static void incrementReindeerSwitch() {
+        incrementReindeerSwitch(1);
     }
 
     /**
@@ -24,7 +48,7 @@ public class Logger {
      *
      * @param increment il numero di cambi di renne da aggiungere
      */
-    public static void addReindeerSwitch(int increment) {
+    public static void incrementReindeerSwitch(int increment) {
         reindeerSwitch += increment;
     }
 
@@ -44,6 +68,7 @@ public class Logger {
      * @return una stringa contenente il resoconto delle attività
      */
     public static String log() {
-        return String.format("Numero regali consegnati: %d\nCambi di renne effetuati: %d\nSquadra attiva di renne: %s\nSquadra in riposo di renne: %s", 0, 0, "", "");
+        return String.format("Numero regali consegnati: %d\nCambi di renne effetuati: %d\nSquadra attiva di renne: %s\nSquadra in riposo di renne: %s",
+                giftDelivered, reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
     }
 }

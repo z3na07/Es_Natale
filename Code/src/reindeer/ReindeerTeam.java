@@ -45,4 +45,12 @@ public class ReindeerTeam {
             }
         });
     }
+
+    public ArrayList<Reindeer> getActiveTeam() {
+        return activeTeam;
+    }
+
+    public ArrayList<Reindeer> getRestingTeam() {
+        return restingTeam;
+    }
 }
