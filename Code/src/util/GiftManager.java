@@ -1,15 +1,19 @@
 package util;
 
 public class GiftManager {
-    private static long giftsToDeliver;
-    private static long giftsUntilStop = 250_000_000;
-    private static final long maxGift = 250_000_000;
+    private long giftsToDeliver;
+    private long giftsUntilStop;
+    private final long maxGift;
+
+    public GiftManager(long maxGift) {
+        this.maxGift = this.giftsUntilStop = maxGift;
+    }
 
     /**
      * Resetta il numero di regali rimanenti fino allo stop al valore massimo.
      */
-    public static void resetGiftUntilStop() {
-        giftsUntilStop = maxGift;
+    public void resetGiftUntilStop() {
+        this.giftsUntilStop = this.maxGift;
     }
 
     /* =========================================
@@ -21,17 +25,17 @@ public class GiftManager {
      *
      * @return il numero di regali rimanenti fino allo stop
      */
-    public static long getGiftsUntilStop() {
-        return giftsUntilStop;
+    public long getGiftsUntilStop() {
+        return this.giftsUntilStop;
     }
 
     /**
      * Imposta il numero di regali rimanenti fino allo stop.
      *
-     * @param giftsUntilStop il nuovo valore di regali rimanenti fino allo stop
+     * @param n il nuovo valore di regali rimanenti fino allo stop
      */
-    public static void setGiftsUntilStop(long giftsUntilStop) {
-        GiftManager.giftsUntilStop = giftsUntilStop;
+    public void setGiftsUntilStop(long n) {
+        this.giftsUntilStop = n;
     }
 
     /**
@@ -39,8 +43,8 @@ public class GiftManager {
      *
      * @param n il numero di regali da aggiungere
      */
-    public static void incrementGiftUntilStop(long n) {
-        giftsToDeliver += n;
+    public void incrementGiftUntilStop(long n) {
+        this.giftsUntilStop += n;
     }
 
     /**
@@ -48,8 +52,8 @@ public class GiftManager {
      *
      * @param n il numero di regali da sottrarre
      */
-    public static void decrementGiftUntilStop(long n) {
-        giftsToDeliver -= n;
+    public void decrementGiftUntilStop(long n) {
+        this.giftsUntilStop -= n;
     }
 
     /* =========================================
@@ -61,8 +65,8 @@ public class GiftManager {
      *
      * @param n il nuovo valore del numero di regali da consegnare
      */
-    public static void setGiftsToDeliver(long n) {
-        giftsToDeliver = n;
+    public void setGiftsToDeliver(long n) {
+        this.giftsToDeliver = n;
     }
 
     /**
@@ -70,8 +74,8 @@ public class GiftManager {
      *
      * @param n il numero di regali da aggiungere
      */
-    public static void incrementGiftToDeliver(long n) {
-        giftsToDeliver += n;
+    public void incrementGiftToDeliver(long n) {
+        this.giftsToDeliver += n;
     }
 
     /**
@@ -79,8 +83,8 @@ public class GiftManager {
      *
      * @param n il numero di regali da sottrarre
      */
-    public static void decrementGiftToDeliver(long n) {
-        giftsToDeliver -= n;
+    public void decrementGiftToDeliver(long n) {
+        this.giftsToDeliver -= n;
     }
 
     /**
@@ -88,8 +92,8 @@ public class GiftManager {
      *
      * @return il numero di regali da consegnare
      */
-    public static long getGiftsToDeliver() {
-        return giftsToDeliver;
+    public long getGiftsToDeliver() {
+        return this.giftsToDeliver;
     }
 
     /* =========================================
@@ -101,7 +105,7 @@ public class GiftManager {
      *
      * @return il numero massimo di regali
      */
-    public static long getMaxGift() {
-        return maxGift;
+    public long getMaxGift() {
+        return this.maxGift;
     }
 }

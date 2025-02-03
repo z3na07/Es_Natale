@@ -1,5 +1,6 @@
+package util;
+
 import reindeer.ReindeerTeam;
-import util.Logger;
 
 public class SantaClaus {
     private long totalGiftsDelivered;
