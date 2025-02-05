@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class Util {
 
-    public static void stopProcess(Scanner scanner, SantaClaus santaClaus, GiftManager giftManager) {
+    public static void stopProcess(Scanner scanner, SantaClaus santaClaus, GiftManager giftManager, boolean resetGiftUntilStop) {
         // Reset gift until stop
-        giftManager.resetGiftUntilStop();
+        if (resetGiftUntilStop) {
+            giftManager.resetGiftUntilStop();
+        }
 
         // Switch reindeer
         santaClaus.switchTeam();

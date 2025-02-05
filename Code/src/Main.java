@@ -16,15 +16,15 @@ public class Main {
         ReindeerTeam reindeerTeam = new ReindeerTeam(initialize.getReindeerArrayList());
         SantaClaus santaClaus = new SantaClaus(reindeerTeam);
         GiftManager giftManager = new GiftManager(250_000_000);
+        TimezoneManager timezoneManager = new TimezoneManager(3);
         Logger.setReindeerTeam(reindeerTeam);
 
         Scanner scanner = new Scanner(System.in);
 
         for (int i = -12; i < 15; i++) {
-            /*
-            TODO Check if the time zone just passed, it is the third time zone passed
-                 util.TimezoneManager.timezonePassed > util.TimezoneManager.maxTimezone
-            */
+            if (timezoneManager.isTimeToChange()) {
+                Util.stopProcess(scanner, santaClaus, giftManager, false);
+            }
 
             String timezone = CountryManager.getTimezoneString(i);
 
@@ -45,7 +45,7 @@ public class Main {
                 santaClaus.addTotalGiftsDelivered(giftManager.getGiftsToDeliver());
                 giftManager.decrementGiftUntilStop(giftManager.getGiftsToDeliver());
             } else {
-                // cycle until it's done
+                // cycle until deliver > stop
                 while (giftManager.getGiftsToDeliver() > giftManager.getGiftsUntilStop()) {
                     // deliver - stop
                     giftManager.decrementGiftToDeliver(giftManager.getGiftsUntilStop());
@@ -53,7 +53,7 @@ public class Main {
                     santaClaus.addTotalGiftsDelivered(giftManager.getGiftsUntilStop());
 
                     // Stop process
-                    Util.stopProcess(scanner, santaClaus, giftManager);
+                    Util.stopProcess(scanner, santaClaus, giftManager, true);
                 }
 
                 // Check if there are gift left
@@ -64,6 +64,8 @@ public class Main {
                     santaClaus.addTotalGiftsDelivered(giftManager.getGiftsToDeliver());
                 }
             }
+
+            timezoneManager.incrementTimezonePassed();
         }
 
         System.out.println("PROGRAM FINISHED");
