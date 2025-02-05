@@ -14,7 +14,7 @@ public class Country {
     }
 
     public long getPopulationOfGoodChilder() {
-        Number n = population / goodChilder;
+        Number n = population * goodChilder;
         return n.longValue();
     }
 

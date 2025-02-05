@@ -1,4 +1,5 @@
-import Util.Logger;
+package util;
+
 import reindeer.ReindeerTeam;
 
 public class SantaClaus {
@@ -15,7 +16,7 @@ public class SantaClaus {
     public void switchTeam() {
         reindeerTeam.switchTeams();
         reindeerSwitches++;
-        Logger.logReindeerMessage(reindeerSwitches);
+        Logger.incrementReindeerSwitch();
     }
 
     public long getTotalGiftsDelivered() {
@@ -23,7 +24,8 @@ public class SantaClaus {
     }
 
     public void addTotalGiftsDelivered(long giftsToAdd) {
-        this.totalGiftsDelivered += totalGiftsDelivered;
+        this.totalGiftsDelivered += giftsToAdd;
+        Logger.incrementGiftDeliverd(giftsToAdd);
     }
 
     public int getTimezonePassed() {
