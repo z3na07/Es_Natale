@@ -20,6 +20,10 @@ public class Logger {
         Logger.reindeerTeam = reindeerTeam;
     }
 
+    /* =========================================
+    *               GIFT DELIVER
+    * ========================================= */
+
     public static void setGiftDelivered(long n) {
         giftDelivered = n;
     }
@@ -35,6 +39,10 @@ public class Logger {
     public static void incrementGiftDeliverd(long increment) {
         giftDelivered += increment;
     }
+
+    /* =========================================
+     *             REINDEER SWITCH
+     * ========================================= */
 
     /**
      * Aggiunge un cambio di renne incrementando il contatore di 1.
@@ -68,7 +76,7 @@ public class Logger {
      * @return una stringa contenente il resoconto delle attività
      */
     public static String log() {
-        return String.format("Numero regali consegnati: %d\nCambi di renne effetuati: %d\nSquadra attiva di renne: %s\nSquadra in riposo di renne: %s",
+        return String.format("Numero regali consegnati: %d\nRUDOLPH:\n\tCambi di renne effetuati: %d\n\tSquadra attiva di renne: %s\n\tSquadra in riposo di renne: %s",
                 giftDelivered, reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
     }
 }
