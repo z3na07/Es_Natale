@@ -8,8 +8,10 @@ package util;
  * </p>
  */
 public class TimezoneManager {
-    public int timezonePassed;
-    public final int maxTimezone;
+    private int timezonePassed;
+    private int timezoneToChange;
+    private final int maxTimezone;
+    private int currentTimezone;
 
     /**
      * Constructor for the TimezoneManager class.
@@ -19,6 +21,7 @@ public class TimezoneManager {
     public TimezoneManager(int maxTimezone) {
         this.maxTimezone = maxTimezone;
         this.timezonePassed = 0;
+        this.timezoneToChange = 0;
     }
 
     /**
@@ -27,7 +30,33 @@ public class TimezoneManager {
      * @return true if the number of time zones crossed is 3, otherwise false
      */
     public boolean isTimeToChange() {
-        return timezonePassed == 3;
+        if (timezoneToChange == 3) {
+            timezoneToChange = 0;
+            return true;
+        }
+
+        return false;
+    }
+
+    public static String getTimezoneString(int i) {
+        String timeZone = "";
+
+        // Transform the index in to time zone annotation
+        if (i < 0) {
+            if (i*(-1) < 10) {
+                timeZone = String.format("UTC-0%d:00", i*(-1));
+            } else {
+                timeZone = String.format("UTC%d:00", i);
+            }
+        } else {
+            if (i < 10) {
+                timeZone = String.format("UTC+0%d:00", i);
+            } else {
+                timeZone = String.format("UTC+%d:00", i);
+            }
+        }
+
+        return timeZone;
     }
 
     /* =========================================
@@ -48,6 +77,7 @@ public class TimezoneManager {
      */
     public void incrementTimezonePassed(int n) {
         this.timezonePassed += n;
+        this.timezoneToChange += n;
     }
 
     /**
@@ -57,5 +87,25 @@ public class TimezoneManager {
      */
     public void setTimezonePassed(int n) {
         this.timezonePassed = n;
+    }
+
+    public int getTimezonePassed() {
+        return timezonePassed;
+    }
+
+    /* =========================================
+                 CURRENT TIME ZONE
+    * ========================================== */
+
+    public void setCurrentTimezone(int t) {
+        currentTimezone = t;
+    }
+
+    public String getCurrentTimezoneString() {
+        return getTimezoneString(currentTimezone);
+    }
+
+    public int getCurrentTimezoneInteger() {
+        return currentTimezone;
     }
 }
