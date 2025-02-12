@@ -9,15 +9,26 @@ import reindeer.Reindeer;
 
 import java.util.ArrayList;
 
+/**
+ * This class deals with get the data from file at the start at the program
+ */
 public class Initialize {
     private ArrayList<Country> countryArrayList;
     private ArrayList<Reindeer> reindeerArrayList;
 
+    /**
+     * when instantiated the obj load the list of countries and the list of reideer
+     */
     public Initialize(String countryArrayListPath, String reindeerPath) {
         this.countryArrayList = loadCountry(countryArrayListPath);
         this.reindeerArrayList = loadReindeer(reindeerPath);
     }
 
+    /**
+     * This method get the reindeer list and assign it to {@code reindeerArrayList}
+     * 
+     * @param reindeerPath path of the file where is save the list of reindeer
+     */
     private ArrayList<Reindeer> loadReindeer(String reindeerPath) {
         ArrayList<Reindeer> reindeer = new ArrayList<>();
 
@@ -33,6 +44,11 @@ public class Initialize {
         return reindeer;
     }
 
+    /**
+     * This method get the country list and assign it to {@code countryArrayList}
+     * 
+     * @param reindeerPath path of the file where is save the list of countries
+     */
     private ArrayList<Country> loadCountry(String countryArrayListPath) {
         ArrayList<Country> countries = new ArrayList<>();
 
