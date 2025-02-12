@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Util {
 
     /**
-    *this method stop the process of the program and sit shows all the  presents that we delivered and it changes the team of reindeers 
+    * This method stop the process of the program and sit shows all the  presents that we delivered and it changes the team of reindeers 
     * 
     * @param scanner is the Scanner so we can read fro keyboard
     * @param santaclaus is the Santa claus object, so without this the program can't run

@@ -18,7 +18,6 @@ public class Country {
     * @param goodChilder is the total in percent of the amount of good children in the country
     * @param timeZone is the country's time zone
     */
-
     public Country(String name, long population, double goodChildren, String timeZone) {
         this.population = population;
         this.goodChildren = goodChildren;
@@ -54,11 +53,11 @@ public class Country {
         return population;
     }
 
-/**
- * method het of the variabler goodChilder 
- * 
- * @return this method returns the total amount of goodl children in a specific country
- */
+    /**
+     * method het of the variabler goodChilder 
+     * 
+     * @return this method returns the total amount of goodl children in a specific country
+     */
     public double getgoodChildren() {
         return goodChildren;
 
