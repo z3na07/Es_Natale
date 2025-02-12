@@ -3,18 +3,18 @@ package country;
 public class Country {
     private String name;
     private long population;
-    private double goodChilder;
+    private double goodChildren;
     private String timeZone;
 
-    public Country(String name, long population, double goodChilder, String timeZone) {
+    public Country(String name, long population, double goodChildren, String timeZone) {
         this.name = name;
         this.population = population;
-        this.goodChilder = goodChilder;
+        this.goodChildren = goodChildren;
         this.timeZone = timeZone;
     }
 
-    public long getPopulationOfGoodChilder() {
-        Number n = population * goodChilder;
+    public long getPopulationOfgoodChildren() {
+        Number n = population * goodChildren;
         return n.longValue();
     }
 
@@ -26,8 +26,8 @@ public class Country {
         return population;
     }
 
-    public double getGoodChilder() {
-        return goodChilder;
+    public double getgoodChildren() {
+        return goodChildren;
     }
 
     public String getTimeZone() {

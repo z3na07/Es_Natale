@@ -6,15 +6,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * This class store all counties and divide them by timezone.
+ */
 public class CountryManager {
     private ArrayList<Country> countryArrayList;
     private HashMap<String, ArrayList<Country>> countryGroupByTimeZone;
 
+    /**
+     * On initialization the CountryManager obj take the list of countries and
+     * divide them in timezone
+     * 
+     * @param countryArrayList ArrayList of all the countries
+     */
     public CountryManager(ArrayList<Country> countryArrayList) {
         this.countryArrayList = countryArrayList;
         divideByTimeZone();
     }
 
+    /**
+     * Divide the countries ArrayList by timezone
+     */
     private void divideByTimeZone() {
         countryGroupByTimeZone = new HashMap<>();
 
@@ -27,6 +39,13 @@ public class CountryManager {
         }
     }
 
+    /**
+     * Get all the countries in a specific timezone passed as paramenter
+     * 
+     * @param timezone String of the timezone (es: UTC-03:00)
+     * @return an empty arraylist if there are no countries in timezone 
+     *         else return an arraylist of all the coutries in that timezone
+     */
     public ArrayList<Country> getCountriesInTimezone(String timezone) {
         ArrayList<Country> c = countryGroupByTimeZone.get(timezone);
 

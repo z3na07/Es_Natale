@@ -9,10 +9,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * This class deals with read and write data from and to files
+ */
 public class Json {
 
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
+    /**
+     * This class deals with read data from files
+     */
     public static class Reader {
         /**
          * Reads a JSON file and converts its content into the specified class type using Gson.
@@ -32,6 +38,9 @@ public class Json {
         }
     }
 
+    /**
+     * This class deals with writing in files
+     */
     public static class Writer {
         /**
          * Writes a string to the specified file path.
