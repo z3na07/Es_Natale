@@ -18,17 +18,21 @@ public class Main {
         GiftManager giftManager = new GiftManager(250_000_000);
         TimezoneManager timezoneManager = new TimezoneManager(3);
         Logger.setReindeerTeam(reindeerTeam);
+        Logger.setTimezoneManager(timezoneManager);
 
         Scanner scanner = new Scanner(System.in);
 
         for (int i = -12; i < 15; i++) {
+            // Set the current timezone
+            timezoneManager.setCurrentTimezone(i);
+
+            // Check how many timezone santa passed
             if (timezoneManager.isTimeToChange()) {
                 Util.stopProcess(scanner, santaClaus, giftManager, false);
             }
 
-            String timezone = CountryManager.getTimezoneString(i);
-
-            ArrayList<Country> countriesInTimezone = countryManager.getCountriesInTimezone(timezone);
+            // Get all the country in this timezone
+            ArrayList<Country> countriesInTimezone = countryManager.getCountriesInTimezone(timezoneManager.getCurrentTimezoneString());
 
             // if there are no countries in timezone break
             if (countriesInTimezone.isEmpty()) {
@@ -36,8 +40,8 @@ public class Main {
             }
 
             // Get how many gifts santa have to deliver in the specific timezone
-            for (Country c : countriesInTimezone) {
-                giftManager.incrementGiftToDeliver(c.getPopulationOfGoodChilder());
+            for (Country country : countriesInTimezone) {
+                giftManager.incrementGiftToDeliver(country.getPopulationOfGoodChilder());
             }
 
             // If the gift to deliver are less than gift until stop

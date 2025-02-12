@@ -1,6 +1,5 @@
 package util;
 
-import reindeer.Reindeer;
 import reindeer.ReindeerTeam;
 
 /**
@@ -12,13 +11,21 @@ import reindeer.ReindeerTeam;
  */
 public class Logger {
     private static long giftDelivered;
-    private static String reindeerMessage;
     private static int reindeerSwitch;
     private static ReindeerTeam reindeerTeam;
+    private static TimezoneManager timezoneManager;
 
     public static void setReindeerTeam(ReindeerTeam reindeerTeam) {
         Logger.reindeerTeam = reindeerTeam;
     }
+
+    public static void setTimezoneManager(TimezoneManager timezoneManager) {
+        Logger.timezoneManager = timezoneManager;
+    }
+
+    /* =========================================
+    *               GIFT DELIVER
+    * ========================================= */
 
     public static void setGiftDelivered(long n) {
         giftDelivered = n;
@@ -35,6 +42,10 @@ public class Logger {
     public static void incrementGiftDeliverd(long increment) {
         giftDelivered += increment;
     }
+
+    /* =========================================
+     *             REINDEER SWITCH
+     * ========================================= */
 
     /**
      * Aggiunge un cambio di renne incrementando il contatore di 1.
@@ -61,6 +72,21 @@ public class Logger {
         reindeerSwitch = n;
     }
 
+    private static String logSanta() {
+        return String.format("SANTA CLAUS\n\tNumero regali consegnati: %d\n",
+                giftDelivered);
+    }
+
+    private static String logRudolph() {
+        return String.format("RUDOLPH:\n\tCambi di renne effetuati: %d\n\tSquadra attiva di renne: %s\n\tSquadra in riposo di renne: %s\n",
+                reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
+    }
+
+    private static String logStopProcess() {
+        return String.format("STOP PROCESS\n\tFuso orario corrente: %s\n\tFuso orario successivo: %s\n\tFusi orari passati: %s\n",
+                timezoneManager.getCurrentTimezoneString(), TimezoneManager.getTimezoneString(timezoneManager.getCurrentTimezoneInteger()+1), timezoneManager.getTimezonePassed());
+    }
+
     /**
      * Genera un registro delle attività, riportando il numero di regali consegnati
      * e i cambi di renne effettuati.
@@ -68,7 +94,6 @@ public class Logger {
      * @return una stringa contenente il resoconto delle attività
      */
     public static String log() {
-        return String.format("Numero regali consegnati: %d\nCambi di renne effetuati: %d\nSquadra attiva di renne: %s\nSquadra in riposo di renne: %s",
-                giftDelivered, reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
+        return logStopProcess() + logSanta() + logRudolph();
     }
 }

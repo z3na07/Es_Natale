@@ -17,7 +17,7 @@ public class Util {
         System.out.println(Logger.log());
 
         // Ask to continue
-        System.out.println("Premere invio per continuare");
+        System.out.println(">>> Premere invio per continuare");
         scanner.nextLine();
     }
 }
