@@ -15,7 +15,7 @@ public class Country {
      * 
      * @param name is te name of the conutry that we are creating
      * @param population is the total puplation of the country
-    * @param goodChilder is the total in percent of the amount of good children in the country
+    * @param goodChildren is the total in percent of the amount of good children in the country
     * @param timeZone is the country's time zone
     */
     public Country(String name, long population, double goodChildren, String timeZone) {
@@ -30,7 +30,7 @@ public class Country {
     * 
     * @return n.longvaue() this methods returns the amount of good children expressed in percent
     */
-    public long getPopulationOfgoodChildren() {
+    public long getPopulationOfGoodChildren() {
         Number n = population * goodChildren;
         return n.longValue();
     }
@@ -58,7 +58,7 @@ public class Country {
      * 
      * @return this method returns the total amount of goodl children in a specific country
      */
-    public double getgoodChildren() {
+    public double getGoodChildren() {
         return goodChildren;
 
     }

@@ -41,7 +41,7 @@ public class Main {
 
             // Get how many gifts santa have to deliver in the specific timezone
             for (Country country : countriesInTimezone) {
-                giftManager.incrementGiftToDeliver(country.getPopulationOfGoodChilder());
+                giftManager.incrementGiftToDeliver(country.getPopulationOfGoodChildren());
             }
 
             // If the gift to deliver are less than gift until stop
@@ -71,6 +71,8 @@ public class Main {
 
             timezoneManager.incrementTimezonePassed();
         }
+
+        Logger.writeLog("data\\files\\log.txt");
 
         System.out.println("PROGRAM FINISHED");
     }
