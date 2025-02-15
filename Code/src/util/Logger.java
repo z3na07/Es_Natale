@@ -2,6 +2,12 @@ package util;
 
 import reindeer.ReindeerTeam;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * Classe di utilità per la gestione dei log relativi alle consegne dei regali e ai cambi di renne.
  * <p>
@@ -24,12 +30,19 @@ public class Logger {
         Logger.timezoneManager = timezoneManager;
     }
 
+    public static void logTimezonePassed() {
+        LocalDateTime time = LocalDateTime.now();
+        logString += String.format("[%d/%d/%d-%d:%d:%d] - %s timezone passed", time.getYear(), time.getMonth().getValue(), time.getDayOfMonth(), time.getHour(), time.getMinute(), time.getSecond(), timezoneManager.getCurrentTimezoneString());
+    }
+
     /* =========================================
     *               GIFT DELIVER
     * ========================================= */
 
     public static void logGiftDelivered() {
-        logString += String.format("[] - A has been delivered!");
+        LocalDateTime time = LocalDateTime.now();
+        logString += String.format("[%d/%d/%d-%d:%d:%d] - A has been delivered!\n",
+                time.getYear(), time.getMonth().getValue(), time.getDayOfMonth(), time.getHour(), time.getMinute(), time.getSecond());
     }
 
     public static void setGiftDelivered(long n) {
@@ -51,6 +64,12 @@ public class Logger {
     /* =========================================
      *             REINDEER SWITCH
      * ========================================= */
+
+    public static void logReindeerSwitch() {
+        LocalDateTime time = LocalDateTime.now();
+        logString += String.format("[%d/%d/%d-%d:%d:%d] - Team has switched. Active %s, Resting %s\n",
+                time.getYear(), time.getMonth().getValue(), time.getDayOfMonth(), time.getHour(), time.getMinute(), time.getSecond(), reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
+    }
 
     /**
      * Aggiunge un cambio di renne incrementando il contatore di 1.
@@ -77,6 +96,11 @@ public class Logger {
         reindeerSwitch = n;
     }
 
+    private static String logStopProcess() {
+        return String.format("STOP PROCESS\n\tFuso orario corrente: %s\n\tFuso orario successivo: %s\n\tFusi orari passati: %s\n",
+                timezoneManager.getCurrentTimezoneString(), TimezoneManager.getTimezoneString(timezoneManager.getCurrentTimezoneInteger()+1), timezoneManager.getTimezonePassed());
+    }
+
     private static String logSanta() {
         return String.format("SANTA CLAUS\n\tNumero regali consegnati: %d\n",
                 giftDelivered);
@@ -87,11 +111,6 @@ public class Logger {
                 reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
     }
 
-    private static String logStopProcess() {
-        return String.format("STOP PROCESS\n\tFuso orario corrente: %s\n\tFuso orario successivo: %s\n\tFusi orari passati: %s\n",
-                timezoneManager.getCurrentTimezoneString(), TimezoneManager.getTimezoneString(timezoneManager.getCurrentTimezoneInteger()+1), timezoneManager.getTimezonePassed());
-    }
-
     /**
      * Genera un registro delle attività, riportando il numero di regali consegnati
      * e i cambi di renne effettuati.
@@ -100,5 +119,18 @@ public class Logger {
      */
     public static String log() {
         return logStopProcess() + logSanta() + logRudolph();
+    }
+
+    public static void writeLog(String path) {
+        try {
+            FileWriter fileWriter = new FileWriter(path);
+
+            fileWriter.write(logString);
+
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
