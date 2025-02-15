@@ -38,6 +38,11 @@ public class TimezoneManager {
         return false;
     }
 
+    /**
+     * this method transform the number in a string of a timezone.
+     * 
+     * @return 
+     */
     public static String getTimezoneString(int i) {
         String timeZone = "";
 

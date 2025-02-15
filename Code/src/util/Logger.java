@@ -14,6 +14,7 @@ public class Logger {
     private static int reindeerSwitch;
     private static ReindeerTeam reindeerTeam;
     private static TimezoneManager timezoneManager;
+    private static String logString;
 
     public static void setReindeerTeam(ReindeerTeam reindeerTeam) {
         Logger.reindeerTeam = reindeerTeam;
@@ -26,6 +27,10 @@ public class Logger {
     /* =========================================
     *               GIFT DELIVER
     * ========================================= */
+
+    public static void logGiftDelivered() {
+        logString += String.format("[] - A has been delivered!");
+    }
 
     public static void setGiftDelivered(long n) {
         giftDelivered = n;
