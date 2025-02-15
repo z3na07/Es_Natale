@@ -72,6 +72,11 @@ public class Logger {
         reindeerSwitch = n;
     }
 
+    private static String logStopProcess() {
+        return String.format("STOP PROCESS\n\tFuso orario corrente: %s\n\tFuso orario successivo: %s\n\tFusi orari passati: %s\n",
+                timezoneManager.getCurrentTimezoneString(), TimezoneManager.getTimezoneString(timezoneManager.getCurrentTimezoneInteger()+1), timezoneManager.getTimezonePassed());
+    }
+
     private static String logSanta() {
         return String.format("SANTA CLAUS\n\tNumero regali consegnati: %d\n",
                 giftDelivered);
@@ -80,11 +85,6 @@ public class Logger {
     private static String logRudolph() {
         return String.format("RUDOLPH:\n\tCambi di renne effetuati: %d\n\tSquadra attiva di renne: %s\n\tSquadra in riposo di renne: %s\n",
                 reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
-    }
-
-    private static String logStopProcess() {
-        return String.format("STOP PROCESS\n\tFuso orario corrente: %s\n\tFuso orario successivo: %s\n\tFusi orari passati: %s\n",
-                timezoneManager.getCurrentTimezoneString(), TimezoneManager.getTimezoneString(timezoneManager.getCurrentTimezoneInteger()+1), timezoneManager.getTimezonePassed());
     }
 
     /**
