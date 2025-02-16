@@ -20,7 +20,7 @@ public class Logger {
     private static int reindeerSwitch;
     private static ReindeerTeam reindeerTeam;
     private static TimezoneManager timezoneManager;
-    private static String logString;
+    private static String logString = "";
 
     public static void setReindeerTeam(ReindeerTeam reindeerTeam) {
         Logger.reindeerTeam = reindeerTeam;
@@ -32,17 +32,16 @@ public class Logger {
 
     public static void logTimezonePassed() {
         LocalDateTime time = LocalDateTime.now();
-        logString += String.format("[%d/%d/%d-%d:%d:%d] - %s timezone passed", time.getYear(), time.getMonth().getValue(), time.getDayOfMonth(), time.getHour(), time.getMinute(), time.getSecond(), timezoneManager.getCurrentTimezoneString());
+        logString += "[" + time.getYear() +"/" + time.getMonth().getValue() + "/" + time.getDayOfMonth() + "-" + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond() + "] - 🕛 A timezone has passed!\n";
     }
 
     /* =========================================
     *               GIFT DELIVER
     * ========================================= */
 
-    public static void logGiftDelivered() {
+    public static void logGiftDelivered(long giftDelivered) {
         LocalDateTime time = LocalDateTime.now();
-        logString += String.format("[%d/%d/%d-%d:%d:%d] - A has been delivered!\n",
-                time.getYear(), time.getMonth().getValue(), time.getDayOfMonth(), time.getHour(), time.getMinute(), time.getSecond());
+        logString += "[" + time.getYear() +"/" + time.getMonth().getValue() + "/" + time.getDayOfMonth() + "-" + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond() + "] - " + "🎁 " + giftDelivered + " gifts has been delivered!\n";
     }
 
     public static void setGiftDelivered(long n) {
@@ -59,16 +58,17 @@ public class Logger {
 
     public static void incrementGiftDeliverd(long increment) {
         giftDelivered += increment;
+
+        logGiftDelivered(increment);
     }
 
     /* =========================================
      *             REINDEER SWITCH
      * ========================================= */
 
-    public static void logReindeerSwitch() {
+    public static void logReindeerSwitch(int numberOfSwitch) {
         LocalDateTime time = LocalDateTime.now();
-        logString += String.format("[%d/%d/%d-%d:%d:%d] - Team has switched. Active %s, Resting %s\n",
-                time.getYear(), time.getMonth().getValue(), time.getDayOfMonth(), time.getHour(), time.getMinute(), time.getSecond(), reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
+        logString += "[" + time.getYear() +"/" + time.getMonth().getValue() + "/" + time.getDayOfMonth() + "-" + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond() + "] - " + "🦌 " + numberOfSwitch + " reindeer switches has been performed!\n";
     }
 
     /**
@@ -85,6 +85,8 @@ public class Logger {
      */
     public static void incrementReindeerSwitch(int increment) {
         reindeerSwitch += increment;
+
+        logReindeerSwitch(1);
     }
 
     /**
