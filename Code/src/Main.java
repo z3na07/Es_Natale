@@ -26,7 +26,7 @@ public class Main {
             // Set the current timezone
             timezoneManager.setCurrentTimezone(i);
 
-            // Check how many timezone santa passed
+            // Check how many timezone santa has passed
             if (timezoneManager.isTimeToChange()) {
                 Util.stopProcess(scanner, santaClaus, giftManager, false);
             }
@@ -70,9 +70,10 @@ public class Main {
             }
 
             timezoneManager.incrementTimezonePassed();
+            Logger.logTimezonePassed();
         }
 
-        Logger.writeLog("data\\files\\log.txt");
+        Logger.writeLog("src\\data\\files\\log.txt");
 
         System.out.println("PROGRAM FINISHED");
     }

@@ -40,8 +40,13 @@ public class TimezoneManager {
 
     /**
      * this method transform the number in a string of a timezone.
-     * 
-     * @return 
+     * INPUT: 5
+     * OUTPUT: UTC+05:00
+     *
+     * INPUT: -6
+     * OUTPUT: UTC-06:00
+     *
+     * @return The timezone as string corresponding to the number in input
      */
     public static String getTimezoneString(int i) {
         String timeZone = "";
