@@ -47,7 +47,7 @@ public class Initialize {
     /**
      * This method get the country list and assign it to {@code countryArrayList}
      * 
-     * @param reindeerPath path of the file where is save the list of countries
+     * @param countryArrayListPath path of the file where is writen the list of countries
      */
     private ArrayList<Country> loadCountry(String countryArrayListPath) {
         ArrayList<Country> countries = new ArrayList<>();

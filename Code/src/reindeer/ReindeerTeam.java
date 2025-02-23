@@ -52,7 +52,7 @@ public class ReindeerTeam {
     }
 
     /**
-     * This methods 
+     * This methods order the reindeer based on the state of {@code active} attribute of the reindeer
      */
     private void orderTeams() {
         activeTeam.clear();
@@ -67,16 +67,10 @@ public class ReindeerTeam {
         });
     }
 
-    /**
-     * 
-     */
     public ArrayList<Reindeer> getActiveTeam() {
         return activeTeam;
     }
 
-    /**
-     * 
-     */
     public ArrayList<Reindeer> getRestingTeam() {
         return restingTeam;
     }
