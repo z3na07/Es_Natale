@@ -78,6 +78,8 @@ public class Main {
 
         Logger.writeLog("src\\data\\files\\log.txt");
 
+        System.out.println("YOU CAN VIEW A REPORT IN src\\data\\files\\log.txt");
+
         System.out.println("PROGRAM FINISHED");
     }
 }
