@@ -22,6 +22,9 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Premere invio per iniziare la simulazione");
+        scanner.nextLine();
+
         for (int i = -12; i < 15; i++) {
             // Set the current timezone
             timezoneManager.setCurrentTimezone(i);
