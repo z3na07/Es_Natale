@@ -98,16 +98,29 @@ public class Logger {
         reindeerSwitch = n;
     }
 
+    /**
+     * Prints the current timezone the next timezone, the timezone passed
+     * @return a string with the current timezone the next timezone, the timezone passed
+     */
     private static String logStopProcess() {
         return String.format("STOP PROCESS\n\tFuso orario corrente: %s\n\tFuso orario successivo: %s\n\tFusi orari passati: %s\n",
                 timezoneManager.getCurrentTimezoneString(), TimezoneManager.getTimezoneString(timezoneManager.getCurrentTimezoneInteger()+1), timezoneManager.getTimezonePassed());
     }
 
+    /**
+     * Prints the current timezone the next timezone, the timezone passed
+     * @return a string the current timezone the next timezone, the timezone passed
+     */
     private static String logSanta() {
         return String.format("SANTA CLAUS\n\tNumero regali consegnati: %d\n",
                 giftDelivered);
     }
 
+    /**
+     * Prints all the switch of reindeer, the active team, the resting team
+     *
+     * @return a string all the switch of reindeer, the active team, the resting team
+     */
     private static String logRudolph() {
         return String.format("RUDOLPH:\n\tCambi di renne effetuati: %d\n\tSquadra attiva di renne: %s\n\tSquadra in riposo di renne: %s\n",
                 reindeerSwitch, reindeerTeam.getActiveTeam(), reindeerTeam.getRestingTeam());
@@ -123,6 +136,11 @@ public class Logger {
         return logStopProcess() + logSanta() + logRudolph();
     }
 
+    /**
+     * Write the log info in to the path
+     *
+     * @param path
+     */
     public static void writeLog(String path) {
         try {
             FileWriter fileWriter = new FileWriter(path);
