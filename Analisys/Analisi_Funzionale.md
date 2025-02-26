@@ -8,17 +8,17 @@ La prima parte del progetto e’ generare un set di dati casuale in un file json
 Questo e’ un file di esempio:
 
 ```json  
-[  
-    {  
-            "timezone": "UTC-12:00",  
-            "countries": \[  
-                    {  
-                "name": "Kiribati (Isole della Linea)",  
-                "population": 119449,  
-                "good_children_percentage": 0.87  
-                    }  
-            ]  
-    },  
+[
+    {
+        "timezone": "UTC-12:00",
+        "countries": [
+            {
+                "name": "Kiribati (Isole della Linea)",
+                "population": 119449,
+                "good_children_percentage": 0.87
+            }
+        ]
+    },
     ...
 ]
 ```

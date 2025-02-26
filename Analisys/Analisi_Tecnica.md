@@ -25,8 +25,8 @@ La classe Country rappresenta un paese con un nome, una popolazione, una percent
 
 #### **ATTRIBUTI**
 
-- private String name; = Attributo per il nome del paese.   
-- private long population; = Attributo per la popolazione del paese.   
+- private String name; = Attributo per il nome del paese.
+- private long population; = Attributo per la popolazione del paese.
 - private double goodChildren; = Attributo per il tasso di buoni bambini del paese.  
 - private String timeZone; = Attributo per il fuso orario del paese.
 
@@ -35,11 +35,11 @@ La classe Country rappresenta un paese con un nome, una popolazione, una percent
 - public Country(String name, long population, double goodChildren, String timeZone) = Metodo costruttore per inizializzare gli attributi name, population, goodChildren, e timeZone.  
 - public long getPopulationOfGoodChildren() = Metodo per ottenere il numero di buoni bambini moltiplicando la popolazione per la percentuale di buoni bambini.  
 - public String getName() = Metodo per ottenere il nome del paese.  
-- public long getPopulation() = Metodo per ottenere la popolazione del paese.   
+- public long getPopulation() = Metodo per ottenere la popolazione del paese.
 - public double getGoodChildren() = Metodo per ottenere la percentuale di buoni bambini del paese.
 - public String getTimeZone() = Metodo per ottenere il fuso orario del paese
 
-## **COUNTRYMANAGER**
+### **COUNTRYMANAGER**
 
 #### **FUNZIONAMENTO**
 
@@ -132,9 +132,11 @@ Questa classe gestisce le renne, gestendo il team attivo e quello a riposo.
 ***METODI***
 
 - public ReindeerTeam(ArrayList\<Reindeer\> reindeerArrayList) = Quando viene istanziata, questa classe:  
+
 1. Prende tutte le renne come lista.  
 2. Crea un'istanza di Rudolph.  
 3. Carica i team.  
+
 - private void loadTeams() = Metodo che divide le renne in due team e aggiunge Rudolph al team attivo. public void switchTeams() = Metodo che imposta la variabile active in Reindeer al contrario del suo stato attuale. Quindi aggiunge Rudolph al team attivo.  
 - private void orderTeams() = Metodo che ordina i team.  
 - public ArrayList\<Reindeer\> getActiveTeam() = Metodo che restituisce il team attivo.  
@@ -267,7 +269,7 @@ Rappresenta Babbo Natale e gestisce la consegna dei regali, il cambio delle renn
 - public void addTotalGiftsDelivered(long giftsToAdd) = Metodo che aggiunge un numero specifico di regali al totale dei regali consegnati e aggiorna il logger.  
 - public int getTimezonePassed() = Metodo che restituisce il numero di fusi orari attraversati.  
 - public void setTimezonePassed(int timezonePassed) = Metodo che imposta il numero di fusi orari attraversati.  
-- public int getReindeerSwitches() = Metodo che restituisce il numero di cambi di squadra di renne effettuati. 
+- public int getReindeerSwitches() = Metodo che restituisce il numero di cambi di squadra di renne effettuati.
 
 **TIMEZONEMANAGER**
 
@@ -293,7 +295,7 @@ Gestisce il conteggio dei fusi orari attraversati. Questa classe tiene traccia d
 
 **UTIL**
 
-***FUNZIONAMENTO***   
+***FUNZIONAMENTO***
 In questa classe abbiamo il metodo che ferma il programma e mostra tutte le statistiche.
 
 ***IMPORTAZIONI***
@@ -302,7 +304,6 @@ In questa classe abbiamo il metodo che ferma il programma e mostra tutte le stat
 
 ***METODI***
 
--   
--   
+-
+-
 - public static void stopProcess(Scanner scanner, SantaClaus santaClaus, GiftManager giftManager, boolean resetGiftUntilStop) = Questo metodo ferma il processo del programma, mostra tutti i regali che abbiamo consegnato e cambia il team di renne.
-
