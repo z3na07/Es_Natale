@@ -1,5 +1,7 @@
 # **ANALISI TECNICA**
 
+---
+
 ## **MAIN**
 
 #### **FUNZIONAMENTO**
@@ -304,6 +306,4 @@ In questa classe abbiamo il metodo che ferma il programma e mostra tutte le stat
 
 ***METODI***
 
--
--
 - public static void stopProcess(Scanner scanner, SantaClaus santaClaus, GiftManager giftManager, boolean resetGiftUntilStop) = Questo metodo ferma il processo del programma, mostra tutti i regali che abbiamo consegnato e cambia il team di renne.

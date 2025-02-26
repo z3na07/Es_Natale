@@ -1,5 +1,7 @@
 # **ANALISI DEI REQUISITI**
 
+---
+
 **Descrizione del progetto**  
 Il software deve simulare la consegna dei regali da parte di Babbo Natale, tenendo conto di diversi fusi orari e della popolazione di ogni stato riconosciuto dall'ONU. Il programma gestira' il cambio delle squadre di renne e fornira' statistiche dettagliate sulle consegne effettuate.
 
